@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-size-factor: 1;
+  --contrast-factor: 1;
+  --letter-spacing: 0px;
+  --line-height: 1.5;
+  --saturation-factor: 1;
+}
+
+body {
+  font-size: calc(1rem * var(--text-size-factor));
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  filter: contrast(var(--contrast-factor)) saturate(var(--saturation-factor));
+}
+
+.dyslexia-friendly {
+  font-family: "OpenDyslexic", sans-serif;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+}
+
+.highlight-links a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #6200ee;
+  background-color: rgba(98, 0, 238, 0.1);
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.no-imagery img {
+  display: none;
+}
+
+.no-imagery [role="img"] {
+  display: none;
+}
